@@ -12,7 +12,7 @@ const timeDifference = (date1,date2)=> {
 
     var secondsDifference = Math.floor(difference/1000);
 
-    return `it took ${daysDifference > 0 ? `${daysDifference} d` : ""} ${hoursDifference > 0 ? `${hoursDifference} h` :""} ${minutesDifference > 0 ? `${minutesDifference} m`:"less than a minute"}`;
+    return `${daysDifference > 0 ? `${daysDifference} d` : ""} ${hoursDifference > 0 ? `${hoursDifference} h` :""} ${minutesDifference > 0 ? `${minutesDifference} m`:"less than a minute"}`;
 };
 
 module.exports = {timeDifference};

@@ -18,4 +18,4 @@ Run the application
 |List tasks               |displays a list of all tasks|
 |List completed tasks     |displays a list of completed tasks|
 |List pending tasks       |displays a list of pending tasks|
-|Exit           |closes the application|
+|Exit                     |closes the application|

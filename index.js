@@ -1,7 +1,7 @@
 require('colors');
 
 const { saveFile, readFile } = require('./helpers/filer');
-const { menu,pause, readInput } = require('./helpers/inquirer');
+const { menu,pause, readInput, listToDelete, confirm, listToComplete} = require('./helpers/inquirer');
 const TaskList = require('./models/tasks');
 
 const main = async()=>{
@@ -18,7 +18,6 @@ const main = async()=>{
             switch (opt) {
                 case 1:
                     const desc = await readInput("Insert task description: ");
-                    console.log(desc);
                     l.createTask(desc);
                     break;
                 case 2:
@@ -31,7 +30,13 @@ const main = async()=>{
                     l.displayByStatus();
                     break;
                 case 5:
-            
+                    const ids = await listToComplete(l.listArray);
+                    l.toggleCompleteTask(ids);
+                    break;
+                case 6:
+                    const selected = await listToDelete(l.listArray);
+                    const conf = await confirm("Task will be deleted, ok?")
+                    if(conf) l.deleteTask(selected);
                     break;
                 case 0:
             

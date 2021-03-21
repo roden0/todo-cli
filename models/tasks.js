@@ -25,6 +25,27 @@ class TaskList {
         this.list[t.id] = t;
     }
 
+    deleteTask(id){
+        if(this.list[id]) delete this.list[id];
+    }
+
+    completeTask(id){
+        if(this.list[id]){
+            this.list[id].completeDate = new Date();
+        }
+    }
+
+    toggleCompleteTask(ids){
+        ids.forEach(id=>{
+            this.completeTask(id);
+        });
+        this.listArray.forEach(t=>{
+            if(!ids.includes(t.id)){
+                this.list[t.id].completeDate = null;
+            }
+        });
+    }
+
     displayList(){
         var len = this.listArray.length;
         return this.listArray.forEach((task,i)=>{
@@ -40,14 +61,14 @@ class TaskList {
         var list = onlyCompleted ? this.listArray.filter(t=>t.completeDate) : this.listArray.filter(t=>!t.completeDate);
         var len = list.length;
 
-        return list.forEach((task,i)=>{
+        return len ? list.forEach((task,i)=>{
             
             var isLast = i+1 === len;
             var index = `${i+1}. `.green;
-            var elapsedTime = onlyCompleted ? `(${timeDifference(new Date(task.createDate),new Date(task.completeDate))}) \u23f1` : "";
+            var elapsedTime = onlyCompleted ? `\u23f1 (it took ${timeDifference(new Date(task.createDate),new Date(task.completeDate))})` : `\u23f1 (created on ${task.createDate})`;
 
             console.log(`${i===0?"\n":""} ${index} ${onlyCompleted ? task.desc.grey : task.desc} ${elapsedTime} ${isLast ? "\n": ""}`)
-        });
+        }): console.log(`\nZero ${onlyCompleted ? "completed": "pending"} tasks found \n`);;
     }
 }
 
