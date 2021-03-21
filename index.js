@@ -1,11 +1,17 @@
 require('colors');
 
+const { saveFile, readFile } = require('./helpers/filer');
 const { menu,pause, readInput } = require('./helpers/inquirer');
 const TaskList = require('./models/tasks');
 
 const main = async()=>{
     let opt = "";
+
     let l = new TaskList();
+
+    const storedData = readFile();
+    if(storedData) l.loadList(storedData);
+    
     do{
         opt = await menu();
 
@@ -16,13 +22,13 @@ const main = async()=>{
                     l.createTask(desc);
                     break;
                 case 2:
-                    console.log(l.list);
+                    l.displayList();
                     break;
                 case 3:
-            
+                    l.displayByStatus(true);
                     break;
                 case 4:
-            
+                    l.displayByStatus();
                     break;
                 case 5:
             
@@ -35,6 +41,9 @@ const main = async()=>{
             }
 
         await pause();
+
+        saveFile(l.listArray);
+
     } while(opt !== 0);
 
     console.log("\nGood bye.\n".blue);

@@ -9,7 +9,7 @@ install dependencies
 > npm i
 
 Run the application
-> node app
+> node index
 
 ## Available options:
 |Command         |Description                    |

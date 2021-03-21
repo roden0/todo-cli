@@ -9,8 +9,8 @@ const menuQuestions =[
         choices: [
             {value:1 ,name:`Create task`},
             {value:2 ,name:`List tasks`},
-            //{value:3 ,name:`List completed task`},
-            //{value:4 ,name:`List pending task`},
+            {value:3 ,name:`List completed tasks`},
+            {value:4 ,name:`List pending tasks`},
             //{value:5 ,name:`Complete task(s)`},
             {value:0 ,name:`Exit`}
         ]
@@ -20,7 +20,7 @@ const pauseQuestion = [
     {
         type: 'input',
         name: 'enter',
-        message: `\nConfirm with ${"ENTER".green}`
+        message: `Confirm or continue with ${"ENTER".green}`
     }
 ];
 
