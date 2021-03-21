@@ -1,5 +1,6 @@
 # TaskBot
-[robot mascot image](https://raw.githubusercontent.com/roden0/todo-cli/main/img/robot.svg)
+
+<img width="150" src="./img/robot.svg" />
 Todo task list CLI Node applicaiton.
 
 ## Setup
