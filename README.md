@@ -1,5 +1,8 @@
-# todo-cli
+# TaskBot
+[robot mascot image](/img/robot.svg)
 Todo task list CLI Node applicaiton.
+
+## Setup
 
 install dependencies
 > npm i
@@ -7,5 +10,9 @@ install dependencies
 Run the application
 > node app
 
-Available options:
-**create task** & **list tasks**
+## Available options:
+|Command         |Description                    |
+|----------------|-------------------------------|
+|Create task    |creates a new task (description text is mandatory|
+|List tasks     |shows the object of tasks|
+|Exit           |closes the application|

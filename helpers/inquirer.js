@@ -5,14 +5,14 @@ const menuQuestions =[
     {
         type: 'list',
         name: 'option',
-        message: "Please, select an option:",
+        message: "Welcome to the TaskBot:",
         choices: [
             {value:1 ,name:`Create task`},
             {value:2 ,name:`List tasks`},
             //{value:3 ,name:`List completed task`},
             //{value:4 ,name:`List pending task`},
             //{value:5 ,name:`Complete task(s)`},
-            //{value:0 ,name:`Exit`}
+            {value:0 ,name:`Exit`}
         ]
     }
 ];
