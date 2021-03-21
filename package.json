@@ -1,0 +1,28 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "description": "Todo task list CLI Node applicaiton.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roden0/todo-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roden0/todo-cli/issues"
+  },
+  "homepage": "https://github.com/roden0/todo-cli#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
