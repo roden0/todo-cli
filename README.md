@@ -18,4 +18,6 @@ Run the application
 |List tasks               |displays a list of all tasks|
 |List completed tasks     |displays a list of completed tasks|
 |List pending tasks       |displays a list of pending tasks|
+|Complete task(s)         |toggles completion from a list of tasks|
+|Delete task              |deletes a task from the list|
 |Exit                     |closes the application|
