@@ -2,6 +2,7 @@
 
 <img width="150" src="./img/robot.svg" />
 ToDo task list CLI Node applicaiton.
+It will store your tasks on a local JSON file.
 
 ## Setup
 
