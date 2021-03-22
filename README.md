@@ -1,7 +1,7 @@
 # TaskBot
 
 <img width="150" src="./img/robot.svg" />
-Todo task list CLI Node applicaiton.
+ToDo task list CLI Node applicaiton.
 
 ## Setup
 
